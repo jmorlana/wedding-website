@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Javier &amp; Marta</title>
+  <meta name="description" content="Nos casamos el 24 de octubre de 2026. ¡Queremos celebrarlo contigo!" />
+  <meta property="og:title" content="Javier & Marta — 24 · X · 2026" />
+  <meta property="og:description" content="Nos casamos el 24 de octubre de 2026." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       PANTALLA DE APERTURA (sobre)
+  ============================================================ -->
+  <div id="opening-screen" aria-label="Abrir invitación">
+    <div id="envelope-wrap">
+      <div id="envelope" role="button" tabindex="0" aria-label="Toca para abrir la invitación">
+        <!-- Flap -->
+        <div class="env-flap"></div>
+        <!-- Body interior shadow -->
+        <div class="env-body">
+          <!-- Seal -->
+          <div class="env-seal">
+            <span class="env-initials">J&amp;M</span>
+          </div>
+          <!-- Side creases -->
+          <div class="env-left-fold"></div>
+          <div class="env-right-fold"></div>
+          <div class="env-bottom-fold"></div>
+        </div>
+      </div>
+      <div class="opening-text">
+        <p class="opening-label">Toca para abrir</p>
+        <div class="opening-divider">
+          <span class="divider-line"></span>
+          <span class="divider-heart">♥</span>
+          <span class="divider-line"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CONTENIDO PRINCIPAL
+  ============================================================ -->
+  <div id="main-content" hidden>
+
+    <!-- ── HERO ────────────────────────────────────────────────── -->
+    <section id="hero" class="hero">
+      <!-- Reemplaza esta imagen con vuestra foto -->
+      <img
+        src="images/foto-principal.jpg"
+        alt="Javier y Marta"
+        class="hero-img"
+        id="hero-img"
+        onerror="this.style.display='none'"
+      />
+      <!-- Overlay gradientes -->
+      <div class="hero-overlay-dark"></div>
+      <div class="hero-overlay-gradient"></div>
+
+      <div class="hero-content reveal-hero">
+        <p class="hero-pretitle">Nos casamos</p>
+        <h1 class="hero-title">
+          Javier <span class="hero-ampersand">&amp;</span> Marta
+        </h1>
+        <div class="hero-line"></div>
+        <p class="hero-date">24 de octubre de 2026</p>
+      </div>
+    </section>
+
+    <!-- ── TARJETA INVITACIÓN ──────────────────────────────────── -->
+    <section class="section-wrap reveal-section">
+      <div class="card">
+        <div class="card-deco card-deco--tl"></div>
+        <div class="card-deco card-deco--br"></div>
+
+        <div class="card-inner">
+          <div class="section-subtitle-row">
+            <span class="subtitle-line"></span>
+            <p class="section-subtitle">Nuestra historia continúa</p>
+            <span class="subtitle-line"></span>
+          </div>
+
+          <h2 class="card-title">
+            Queremos compartir contigo<br>
+            <span class="card-title-accent">este momento</span>
+          </h2>
+          <div class="section-divider"></div>
+
+          <p class="card-body-text">Con la bendición de Dios y en compañía de nuestros padres</p>
+
+          <!-- Padres -->
+          <div class="parents-grid">
+            <div class="parents-col">
+              <p class="parents-label">Padres de la novia</p>
+              <div class="parents-rule"></div>
+              <div class="parents-names">
+                <p>[Nombre madre]</p>
+                <p>[Nombre padre]</p>
+              </div>
+            </div>
+            <div class="parents-separator"></div>
+            <div class="parents-col">
+              <p class="parents-label">Padres del novio</p>
+              <div class="parents-rule"></div>
+              <div class="parents-names">
+                <p>[Nombre madre]</p>
+                <p>[Nombre padre]</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="card-body-text card-body-text--mt">
+            queremos invitarte a celebrar con nosotros uno de los días más importantes de nuestra vida.
+          </p>
+
+          <div class="section-divider"></div>
+
+          <!-- Día y hora -->
+          <p class="date-label">Día y hora</p>
+          <div class="date-display">
+            <div class="date-day-block">
+              <p class="date-month">Octubre</p>
+              <p class="date-number">24</p>
+              <p class="date-year">2026</p>
+            </div>
+            <div class="date-vline"></div>
+            <div class="date-info">
+              <p class="date-weekday">Sábado</p>
+              <p class="date-time">[hora] pm</p>
+              <p class="date-event">Ceremonia religiosa</p>
+            </div>
+          </div>
+
+          <!-- Countdown -->
+          <div class="countdown" id="countdown">
+            <div class="countdown-item" id="cd-days">
+              <span class="countdown-num">--</span>
+              <span class="countdown-lbl">Días</span>
+            </div>
+            <div class="countdown-item" id="cd-hours">
+              <span class="countdown-num">--</span>
+              <span class="countdown-lbl">Horas</span>
+            </div>
+            <div class="countdown-item" id="cd-min">
+              <span class="countdown-num">--</span>
+              <span class="countdown-lbl">Min</span>
+            </div>
+            <div class="countdown-item" id="cd-sec">
+              <span class="countdown-num">--</span>
+              <span class="countdown-lbl">Seg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ITINERARIO ──────────────────────────────────────────── -->
+    <section id="evento" class="section-wrap reveal-section">
+      <div class="card">
+        <div class="card-deco card-deco--tl"></div>
+        <div class="card-deco card-deco--br"></div>
+
+        <div class="card-inner">
+          <div class="section-header">
+            <p class="section-subtitle-plain">Itinerario</p>
+            <h2 class="section-title">Momentos del evento</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="timeline">
+            <!-- Línea central (solo desktop) -->
+            <div class="timeline-line"></div>
+
+            <!-- Ítem 1 -->
+            <div class="timeline-item reveal-timeline">
+              <div class="timeline-content timeline-content--left">
+                <p class="timeline-time">[hora] pm</p>
+                <h3 class="timeline-title">Ceremonia religiosa</h3>
+                <p class="timeline-place">[Iglesia o lugar]</p>
+              </div>
+              <div class="timeline-icon-wrap">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-content timeline-content--right timeline-content--empty"></div>
+            </div>
+
+            <!-- Ítem 2 -->
+            <div class="timeline-item reveal-timeline">
+              <div class="timeline-content timeline-content--left timeline-content--empty"></div>
+              <div class="timeline-icon-wrap">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-content timeline-content--right">
+                <p class="timeline-time">[hora] pm</p>
+                <h3 class="timeline-title">Cóctel de bienvenida</h3>
+                <p class="timeline-place">[Lugar de recepción]</p>
+              </div>
+            </div>
+
+            <!-- Ítem 3 -->
+            <div class="timeline-item reveal-timeline">
+              <div class="timeline-content timeline-content--left">
+                <p class="timeline-time">[hora] pm</p>
+                <h3 class="timeline-title">Cena y celebración</h3>
+                <p class="timeline-place">[Lugar de recepción]</p>
+              </div>
+              <div class="timeline-icon-wrap">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-content timeline-content--right timeline-content--empty"></div>
+            </div>
+
+            <!-- Ítem 4 -->
+            <div class="timeline-item reveal-timeline">
+              <div class="timeline-content timeline-content--left timeline-content--empty"></div>
+              <div class="timeline-icon-wrap">
+                <div class="timeline-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="timeline-content timeline-content--right">
+                <p class="timeline-time">Toda la noche</p>
+                <h3 class="timeline-title">Baile y fiesta</h3>
+                <p class="timeline-place">¡A bailar!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── UBICACIONES ─────────────────────────────────────────── -->
+    <section class="section-wrap reveal-section">
+      <div class="card">
+        <div class="card-deco card-deco--tl"></div>
+        <div class="card-deco card-deco--br"></div>
+
+        <div class="card-inner">
+          <div class="section-header">
+            <p class="section-subtitle-plain">Ubicaciones</p>
+            <h2 class="section-title">Acompáñanos en cada momento</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="locations-grid">
+            <!-- Ceremonia -->
+            <div class="location-card reveal-location">
+              <div class="location-icon-wrap">
+                <div class="location-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                  </svg>
+                </div>
+              </div>
+              <div class="location-info">
+                <p class="location-type">Ceremonia religiosa</p>
+                <h3 class="location-name">[Nombre de la iglesia]</h3>
+                <p class="location-detail">24 de octubre de 2026 · [hora] pm</p>
+                <a href="#" class="location-btn" target="_blank" rel="noreferrer" aria-label="Ver ubicación de la ceremonia">
+                  Ver ubicación
+                </a>
+              </div>
+            </div>
+
+            <div class="locations-separator"></div>
+
+            <!-- Recepción -->
+            <div class="location-card reveal-location reveal-location--right">
+              <div class="location-icon-wrap">
+                <div class="location-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+                  </svg>
+                </div>
+              </div>
+              <div class="location-info">
+                <p class="location-type">Recepción</p>
+                <h3 class="location-name">[Nombre del lugar]</h3>
+                <p class="location-detail">[Dirección] · [hora] pm</p>
+                <a href="#" class="location-btn" target="_blank" rel="noreferrer" aria-label="Ver ubicación de la recepción">
+                  Ver ubicación
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GALERÍA ──────────────────────────────────────────────── -->
+    <section class="section-wrap reveal-section">
+      <div class="card">
+        <div class="card-deco card-deco--tl"></div>
+        <div class="card-deco card-deco--br"></div>
+
+        <div class="card-inner">
+          <div class="section-header">
+            <p class="section-subtitle-plain">Cada momento nos dice que</p>
+            <h2 class="section-title">Juntos todo es mejor</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="gallery-wrap">
+            <div class="gallery-slider" id="gallery-slider">
+              <!-- Diapositivas — reemplaza con vuestras fotos -->
+              <div class="gallery-slide active" data-phrase="Porque encontrarte fue el mejor momento de mi vida">
+                <img src="images/foto-1.jpg" alt="Javier y Marta" onerror="this.style.display='none'" />
+                <div class="slide-placeholder">
+                  <span>Foto 1</span>
+                </div>
+              </div>
+              <div class="gallery-slide" data-phrase="Porque elegimos caminar juntos el resto del camino">
+                <img src="images/foto-2.jpg" alt="Javier y Marta" onerror="this.style.display='none'" />
+                <div class="slide-placeholder">
+                  <span>Foto 2</span>
+                </div>
+              </div>
+              <div class="gallery-slide" data-phrase="Porque cada momento contigo se vuelve especial">
+                <img src="images/foto-3.jpg" alt="Javier y Marta" onerror="this.style.display='none'" />
+                <div class="slide-placeholder">
+                  <span>Foto 3</span>
+                </div>
+              </div>
+              <div class="gallery-slide" data-phrase="Porque amarnos mutuamente es la decisión más bonita">
+                <img src="images/foto-4.jpg" alt="Javier y Marta" onerror="this.style.display='none'" />
+                <div class="slide-placeholder">
+                  <span>Foto 4</span>
+                </div>
+              </div>
+
+              <!-- Overlay gradiente inferior -->
+              <div class="gallery-gradient"></div>
+
+              <!-- Frase deslizante -->
+              <div class="gallery-phrase" id="gallery-phrase">
+                <p>Porque encontrarte fue el mejor momento de mi vida</p>
+              </div>
+
+              <!-- Controles -->
+              <button class="gallery-btn gallery-btn--prev" id="gallery-prev" aria-label="Foto anterior">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12.5 5l-5 5 5 5" />
+                </svg>
+              </button>
+              <button class="gallery-btn gallery-btn--next" id="gallery-next" aria-label="Foto siguiente">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 5l5 5-5 5" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Dots -->
+            <div class="gallery-dots" id="gallery-dots">
+              <button class="gallery-dot active" aria-label="Ver foto 1"></button>
+              <button class="gallery-dot" aria-label="Ver foto 2"></button>
+              <button class="gallery-dot" aria-label="Ver foto 3"></button>
+              <button class="gallery-dot" aria-label="Ver foto 4"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONFIRMACIÓN ASISTENCIA ─────────────────────────────── -->
+    <section id="confirmacion" class="section-wrap reveal-section">
+      <div class="card card--dark">
+        <div class="card-deco card-deco--tl card-deco--light"></div>
+        <div class="card-deco card-deco--br card-deco--light"></div>
+
+        <div class="card-inner">
+          <p class="section-subtitle-plain section-subtitle-plain--light">Con todo nuestro cariño</p>
+          <h2 class="card-title card-title--light">
+            Que este sea solo el inicio<br>de todo lo bueno
+          </h2>
+          <div class="section-divider section-divider--light"></div>
+
+          <p class="card-body-text card-body-text--light">
+            Nos hará muy felices celebrar contigo y guardar este día como uno de nuestros recuerdos más bonitos.
+          </p>
+
+          <!-- El formulario de Google Forms se insertará aquí -->
+          <div class="rsvp-placeholder" id="rsvp-form-area">
+            <p class="rsvp-soon">El formulario de confirmación de asistencia<br>estará disponible próximamente.</p>
+            <!-- Para insertar Google Forms, reemplaza el párrafo anterior con:
+            <iframe
+              src="TU_URL_DE_GOOGLE_FORMS"
+              width="100%"
+              height="600"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              title="Formulario de asistencia">
+              Cargando…
+            </iframe>
+            -->
+          </div>
+
+          <p class="rsvp-signature">Javier &amp; Marta</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PIE DE PÁGINA ───────────────────────────────────────── -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-names">Javier &amp; Marta</p>
+        <p class="footer-date">24 · X · 2026</p>
+        <div class="footer-divider">
+          <span class="divider-line divider-line--footer"></span>
+          <span class="footer-heart">♥</span>
+          <span class="divider-line divider-line--footer"></span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /main-content -->
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
