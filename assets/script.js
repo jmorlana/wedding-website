@@ -33,6 +33,8 @@ const WEDDING_DATE = new Date('2026-10-24T12:00:00');
       triggerHeroReveal();
       // Start scroll observers
       initScrollReveal();
+      // Reveal + start background music (this runs from a user gesture)
+      if (window.WeddingMusic) window.WeddingMusic.reveal(true);
     }, 700);
     // Remove screen from DOM after full transition
     setTimeout(() => {
@@ -263,4 +265,52 @@ function initScrollReveal() {
   }, { passive: true });
 
   startAuto();
+})();
+
+/* ----------------------------------------------------------------
+   BACKGROUND MUSIC — play / pause toggle
+---------------------------------------------------------------- */
+(function initMusic() {
+  const audio  = document.getElementById('bg-music');
+  const toggle = document.getElementById('music-toggle');
+
+  if (!audio || !toggle) return;
+
+  audio.volume = 0.55;
+
+  function setPlaying(playing) {
+    toggle.classList.toggle('is-playing', playing);
+    toggle.classList.toggle('is-paused', !playing);
+    toggle.setAttribute('aria-pressed', String(playing));
+    toggle.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');
+  }
+
+  function play() {
+    const p = audio.play();
+    if (p && typeof p.then === 'function') {
+      p.then(() => setPlaying(true)).catch(() => setPlaying(false));
+    } else {
+      setPlaying(true);
+    }
+  }
+
+  function pause() {
+    audio.pause();
+    setPlaying(false);
+  }
+
+  toggle.addEventListener('click', () => {
+    audio.paused ? play() : pause();
+  });
+
+  audio.addEventListener('play',  () => setPlaying(true));
+  audio.addEventListener('pause', () => setPlaying(false));
+
+  // Exposed so the envelope-open flow can reveal the button and autostart
+  window.WeddingMusic = {
+    reveal(autostart) {
+      toggle.hidden = false;
+      if (autostart) play();
+    }
+  };
 })();
