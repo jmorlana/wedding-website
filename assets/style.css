@@ -188,7 +188,7 @@ button {
 ================================================================ */
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 88svh;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -360,6 +360,11 @@ button {
 /* First section overlaps hero */
 .section-wrap:first-of-type {
   margin-top: -2.5rem;
+}
+
+/* Last section — extra breathing room now the footer is gone */
+.section-wrap:last-of-type {
+  padding-bottom: 5rem;
 }
 
 /* ================================================================
@@ -1007,6 +1012,88 @@ button {
   filter: none;
 }
 
+/* Single centred venue */
+.locations-grid--single {
+  justify-content: center;
+  align-items: center;
+}
+
+.locations-grid--single .location-card {
+  flex: 0 1 auto;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  max-width: 26rem;
+}
+
+.locations-grid--single .location-info {
+  align-items: center;
+}
+
+/* Autobús */
+.bus-block {
+  margin-top: 2.75rem;
+  text-align: center;
+}
+
+.bus-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1rem auto 0;
+  max-width: 40rem;
+}
+
+@media (min-width: 640px) {
+  .bus-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.bus-item {
+  background: var(--cream);
+  border: 1px solid rgba(62, 66, 41, 0.12);
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.bus-icon {
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 50%;
+  border: 1px solid rgba(62, 66, 41, 0.2);
+  background: var(--white);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(62, 66, 41, 0.08);
+}
+
+.bus-icon svg { width: 1.4rem; height: 1.4rem; }
+
+.bus-dir {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--brown);
+}
+
+.bus-detail {
+  font-size: 0.92rem;
+  color: var(--brown-mid);
+}
+
+.bus-time {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green);
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
 /* ================================================================
    GALERÍA
 ================================================================ */
@@ -1176,53 +1263,6 @@ button {
   font-style: italic;
   color: rgba(255,255,255,0.9);
   margin-top: 2rem;
-}
-
-/* ================================================================
-   FOOTER
-================================================================ */
-.site-footer {
-  padding: 3rem 1.5rem 4rem;
-  text-align: center;
-}
-
-.footer-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.footer-names {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
-  font-style: italic;
-  color: var(--brown);
-}
-
-.footer-date {
-  font-size: 0.85rem;
-  letter-spacing: 0.2em;
-  color: var(--brown-mid);
-}
-
-.footer-divider {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 0.75rem;
-}
-
-.divider-line--footer {
-  display: block;
-  width: 3rem;
-  height: 1px;
-  background: var(--gold);
-}
-
-.footer-heart {
-  color: var(--gold);
-  font-size: 0.85rem;
 }
 
 /* ================================================================
