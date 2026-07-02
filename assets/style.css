@@ -91,7 +91,7 @@ button {
 
 #envelope {
   position: relative;
-  width: 280px;
+  width: 330px;
   cursor: pointer;
   transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
               opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
@@ -104,6 +104,9 @@ button {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 8px;
+  filter: drop-shadow(0 26px 46px rgba(62, 66, 41, 0.28))
+          drop-shadow(0 6px 14px rgba(62, 66, 41, 0.16));
 }
 
 #envelope:hover,
@@ -147,7 +150,7 @@ button {
 
 @media (min-width: 640px) {
   .opening-label { font-size: 1.6rem; }
-  #envelope { width: 330px; }
+  #envelope { width: 420px; }
 }
 
 .opening-divider {
