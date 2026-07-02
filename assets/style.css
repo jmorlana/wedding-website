@@ -58,7 +58,7 @@ button {
   position: fixed;
   inset: 0;
   z-index: 999;
-  background-color: var(--cream);
+  background-color: #f7f5f0; /* matches the envelope photo's background so it blends seamlessly */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,11 +100,10 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-.env-svg {
+.env-img {
   display: block;
   width: 100%;
   height: auto;
-  overflow: visible;
 }
 
 #envelope:hover,
@@ -117,49 +116,6 @@ button {
   opacity: 0;
   filter: blur(10px);
   animation: none;
-}
-
-/* Top flap — hinged at the top edge, lifts open */
-.env-flap {
-  transform-box: fill-box;
-  transform-origin: top center;
-  transform: rotateX(0deg);
-  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-#envelope.opening--open .env-flap {
-  transform: rotateX(-165deg);
-}
-
-/* Wax seal */
-.env-monogram {
-  font-family: 'Cormorant Garamond', var(--font-serif);
-  font-size: 21px;
-  font-weight: 600;
-  fill: #5f4a22;
-  dominant-baseline: middle;
-  letter-spacing: 1.5px;
-}
-
-.env-monogram .amp {
-  font-style: normal;
-  font-size: 19px;
-}
-
-.env-seal-g {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: seal-pulse 2.6s ease-in-out infinite;
-}
-
-#envelope.opening--open .env-seal-g {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-@keyframes seal-pulse {
-  0%, 100% { transform: scale(1); }
-  50%       { transform: scale(1.05); }
 }
 
 /* Opening text */

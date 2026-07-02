@@ -8,7 +8,7 @@
   <meta property="og:title" content="Javier & Marta — 24 · X · 2026" />
   <meta property="og:description" content="Nos casamos el 24 de octubre de 2026." />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -22,76 +22,7 @@
   <div id="opening-screen" aria-label="Abrir invitación">
     <div id="envelope-wrap">
       <div id="envelope" role="button" tabindex="0" aria-label="Toca para abrir la invitación">
-        <svg class="env-svg" viewBox="0 0 340 232" role="img" aria-hidden="true">
-          <defs>
-            <linearGradient id="paperGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"  stop-color="#fbf7ef"/>
-              <stop offset="55%" stop-color="#f2ead9"/>
-              <stop offset="100%" stop-color="#e7dcc6"/>
-            </linearGradient>
-            <linearGradient id="sideGrad" x1="0" y1="0" x2="1" y2="0.3">
-              <stop offset="0%"  stop-color="#efe6d3"/>
-              <stop offset="100%" stop-color="#e2d5bb"/>
-            </linearGradient>
-            <linearGradient id="bottomGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"  stop-color="#efe6d2"/>
-              <stop offset="100%" stop-color="#e6d9bf"/>
-            </linearGradient>
-            <linearGradient id="flapGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"  stop-color="#fcf9f2"/>
-              <stop offset="70%" stop-color="#f3ecdd"/>
-              <stop offset="100%" stop-color="#e9dec7"/>
-            </linearGradient>
-            <radialGradient id="waxGrad" cx="38%" cy="33%" r="75%">
-              <stop offset="0%"  stop-color="#ecd7a2"/>
-              <stop offset="42%" stop-color="#d0b271"/>
-              <stop offset="82%" stop-color="#a9893f"/>
-              <stop offset="100%" stop-color="#8c702f"/>
-            </radialGradient>
-            <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
-              <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#3e3a2a" flood-opacity="0.22"/>
-            </filter>
-            <filter id="sealShadow" x="-40%" y="-40%" width="180%" height="180%">
-              <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#5a4718" flood-opacity="0.4"/>
-            </filter>
-          </defs>
-
-          <!-- Envelope base paper -->
-          <rect x="4" y="6" width="332" height="220" rx="14" fill="url(#paperGrad)"
-                stroke="#d9cbac" stroke-width="1" filter="url(#softShadow)"/>
-
-          <!-- Pocket seams -->
-          <path d="M4 20 L170 128 L4 212 Z"     fill="url(#sideGrad)"/>
-          <path d="M336 20 L170 128 L336 212 Z" fill="url(#sideGrad)"/>
-          <path d="M4 226 L336 226 L170 122 Z"  fill="url(#bottomGrad)"/>
-          <!-- Seam highlight lines -->
-          <path d="M4 20 L170 128 L336 20"   fill="none" stroke="#cabd9d" stroke-width="1" opacity="0.7"/>
-          <path d="M4 226 L170 122 L336 226" fill="none" stroke="#cabd9d" stroke-width="1" opacity="0.6"/>
-
-          <!-- Top flap (animated) -->
-          <g class="env-flap">
-            <path d="M4 20 Q4 6 18 6 L322 6 Q336 6 336 20 L170 138 Z"
-                  fill="url(#flapGrad)" stroke="#d9cbac" stroke-width="1"/>
-            <path d="M4 20 L170 138 L336 20" fill="none" stroke="#d3c5a4" stroke-width="1.2" opacity="0.55"/>
-          </g>
-
-          <!-- Wax seal -->
-          <g class="env-seal-g" filter="url(#sealShadow)">
-            <path d="M170 96
-                     c9 0 14 -4 22 -1 c8 3 9 12 12 19 c3 7 9 12 8 20
-                     c-1 8 -8 11 -13 17 c-5 6 -6 14 -14 16 c-8 2 -14 -4 -22 -4
-                     c-8 0 -15 5 -22 1 c-8 -4 -8 -13 -12 -20 c-4 -7 -11 -12 -10 -20
-                     c1 -8 9 -12 14 -18 c5 -6 6 -14 15 -15 c8 -1 14 5 22 5 Z"
-                  fill="url(#waxGrad)"/>
-            <circle cx="170" cy="126" r="30" fill="none" stroke="#7d6330" stroke-width="1.4" opacity="0.45"/>
-            <circle cx="170" cy="126" r="23" fill="none" stroke="#7d6330" stroke-width="1" opacity="0.4"/>
-            <text class="env-monogram" x="170" y="123" text-anchor="middle">J<tspan class="amp">&amp;</tspan>M</text>
-            <!-- laurel sprig -->
-            <path d="M162 140 Q170 150 178 140" fill="none" stroke="#6f5626" stroke-width="1.4" opacity="0.6"/>
-            <path d="M163 141 l-2.5 -3 M166 143 l-2 -3.4 M170 144 l0 -3.6 M174 143 l2 -3.4 M177 141 l2.5 -3"
-                  stroke="#6f5626" stroke-width="1.2" opacity="0.55"/>
-          </g>
-        </svg>
+        <img src="assets/sobre.png" alt="Sobre de la invitación de Javier y Marta" class="env-img" />
       </div>
       <div class="opening-text">
         <p class="opening-label">Toca para abrir</p>
