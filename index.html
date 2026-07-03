@@ -43,14 +43,17 @@
 
     <!-- ── HERO ────────────────────────────────────────────────── -->
     <section id="hero" class="hero">
-      <!-- Reemplaza esta imagen con vuestra foto -->
-      <img
-        src="images/3.jpeg"
-        alt="Javier y Marta"
-        class="hero-img"
-        id="hero-img"
-        onerror="this.style.display='none'"
-      />
+      <!-- Recorte vertical para pantallas en vertical, horizontal para el resto -->
+      <picture>
+        <source media="(orientation: portrait)" srcset="images/hero_mobile.jpeg" />
+        <img
+          src="images/hero.jpeg"
+          alt="Javier y Marta"
+          class="hero-img"
+          id="hero-img"
+          onerror="this.style.display='none'"
+        />
+      </picture>
       <!-- Overlay gradientes -->
       <div class="hero-overlay-dark"></div>
       <div class="hero-overlay-gradient"></div>
