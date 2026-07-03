@@ -361,7 +361,7 @@ button {
    as a scroll affordance. (Target the card right after the hero: the
    hero itself is the first <section>, so :first-of-type would miss it.) */
 .hero + .section-wrap {
-  margin-top: -4.5rem;
+  margin-top: -2.75rem; /* solo asoma el borde redondeado de la tarjeta */
 }
 
 /* Last section — extra breathing room now the footer is gone */
