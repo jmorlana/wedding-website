@@ -188,7 +188,7 @@ button {
 ================================================================ */
 .hero {
   position: relative;
-  min-height: 88svh;
+  min-height: 100svh;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -357,9 +357,11 @@ button {
   .section-wrap { padding: 0 2rem 3.5rem; }
 }
 
-/* First section overlaps hero */
-.section-wrap:first-of-type {
-  margin-top: -2.5rem;
+/* First section overlaps hero — its rounded top peeks over the photo
+   as a scroll affordance. (Target the card right after the hero: the
+   hero itself is the first <section>, so :first-of-type would miss it.) */
+.hero + .section-wrap {
+  margin-top: -4.5rem;
 }
 
 /* Last section — extra breathing room now the footer is gone */
@@ -771,6 +773,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-self: center; /* centre the icon in its grid column, over the line */
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
