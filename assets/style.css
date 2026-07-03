@@ -362,6 +362,8 @@ button {
    hero itself is the first <section>, so :first-of-type would miss it.) */
 .hero + .section-wrap {
   margin-top: -2.75rem; /* solo asoma el borde redondeado de la tarjeta */
+  position: relative;
+  z-index: 2; /* por encima del hero y sus overlays: el borde se ve blanco, no teñido */
 }
 
 /* Last section — extra breathing room now the footer is gone */
