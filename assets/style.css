@@ -1106,17 +1106,15 @@ button {
   margin-top: 2.5rem;
 }
 
+/* Marco 4:3 en todos los dispositivos — coincide con el ratio nativo de
+   las fotos, así una sola versión por foto se ve completa en todas partes */
 .gallery-slider {
   position: relative;
   border-radius: 2rem;
   overflow: hidden;
   background: #ebe7dc;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
   box-shadow: 0 12px 40px rgba(62, 66, 41, 0.12);
-}
-
-@media (min-width: 640px) {
-  .gallery-slider { aspect-ratio: 16 / 10; }
 }
 
 .gallery-slide {
