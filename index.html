@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <!-- ?v=N fuerza a los navegadores a recargar el asset tras cada cambio: súbelo al tocar CSS/JS -->
-  <link rel="stylesheet" href="assets/style.css?v=3" />
+  <link rel="stylesheet" href="assets/style.css?v=4" />
 </head>
 <body>
 
@@ -135,8 +135,7 @@
 
         <div class="card-inner">
           <div class="section-header">
-            <p class="section-subtitle-plain">Itinerario</p>
-            <h2 class="section-title">Momentos del evento</h2>
+            <h2 class="section-title">Itinerario</h2>
             <div class="section-divider"></div>
           </div>
 
@@ -220,8 +219,7 @@
 
         <div class="card-inner">
           <div class="section-header">
-            <p class="section-subtitle-plain">Ubicaciones</p>
-            <h2 class="section-title">Acompáñanos en cada momento</h2>
+            <h2 class="section-title">Ubicaciones</h2>
             <div class="section-divider"></div>
           </div>
 
@@ -247,30 +245,40 @@
             </div>
           </div>
 
-          <!-- Autobús -->
+          <!-- Autobús — cada tarjeta enlaza al punto de salida en Maps -->
           <div class="bus-block">
             <p class="date-label">Autobús</p>
             <div class="bus-grid">
-              <div class="bus-item">
+              <a class="bus-item" href="https://www.google.com/maps/search/?api=1&amp;query=Museo+Pablo+Gargallo+Zaragoza"
+                 target="_blank" rel="noreferrer" aria-label="Ver en el mapa la salida del bus de ida (Museo Pablo Gargallo)">
                 <div class="bus-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-6m-9-9V3.375c0-.621.504-1.125 1.125-1.125h9.75c.621 0 1.125.504 1.125 1.125v9.75m-12 0h12m-12 0V9.75m12 3.375V9.75" />
+                    <rect x="4.5" y="3.25" width="15" height="13.5" rx="2.25" />
+                    <path stroke-linecap="round" d="M4.5 11.5h15M8 14.25h.01M16 14.25h.01" />
+                    <circle cx="8" cy="19" r="1.4" />
+                    <circle cx="16" cy="19" r="1.4" />
                   </svg>
                 </div>
                 <p class="bus-dir">Ida</p>
                 <p class="bus-detail">Desde el Museo Pablo Gargallo</p>
                 <p class="bus-time">11:45 h</p>
-              </div>
-              <div class="bus-item">
+                <span class="bus-cta">Ver punto de salida</span>
+              </a>
+              <a class="bus-item" href="https://www.google.com/maps/search/?api=1&amp;query=Finca+las+Hiedras+Zaragoza"
+                 target="_blank" rel="noreferrer" aria-label="Ver en el mapa la salida del bus de vuelta (Finca las Hiedras)">
                 <div class="bus-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-6m-9-9V3.375c0-.621.504-1.125 1.125-1.125h9.75c.621 0 1.125.504 1.125 1.125v9.75m-12 0h12m-12 0V9.75m12 3.375V9.75" />
+                    <rect x="4.5" y="3.25" width="15" height="13.5" rx="2.25" />
+                    <path stroke-linecap="round" d="M4.5 11.5h15M8 14.25h.01M16 14.25h.01" />
+                    <circle cx="8" cy="19" r="1.4" />
+                    <circle cx="16" cy="19" r="1.4" />
                   </svg>
                 </div>
                 <p class="bus-dir">Vuelta</p>
-                <p class="bus-detail">Desde Finca las Hiedras</p>
+                <p class="bus-detail">Desde Finca las Hiedras<br>Te deja en el Museo Pablo Gargallo</p>
                 <p class="bus-time">00:00 h</p>
-              </div>
+                <span class="bus-cta">Ver punto de salida</span>
+              </a>
             </div>
           </div>
         </div>
@@ -285,7 +293,6 @@
 
         <div class="card-inner">
           <div class="section-header">
-            <p class="section-subtitle-plain">Cada momento nos dice que</p>
             <h2 class="section-title">Juntos todo es mejor</h2>
             <div class="section-divider"></div>
           </div>
