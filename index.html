@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <!-- ?v=N fuerza a los navegadores a recargar el asset tras cada cambio: súbelo al tocar CSS/JS -->
-  <link rel="stylesheet" href="assets/style.css?v=2" />
+  <link rel="stylesheet" href="assets/style.css?v=3" />
 </head>
 <body>
 
@@ -396,21 +396,16 @@
             Nos hará muy felices celebrar contigo y guardar este día como uno de nuestros recuerdos más bonitos.
           </p>
 
-          <!-- El formulario de Google Forms se insertará aquí -->
-          <div class="rsvp-placeholder" id="rsvp-form-area">
-            <p class="rsvp-soon">El formulario de confirmación de asistencia<br>estará disponible próximamente.</p>
-            <!-- Para insertar Google Forms, reemplaza el párrafo anterior con:
-            <iframe
-              src="TU_URL_DE_GOOGLE_FORMS"
-              width="100%"
-              height="600"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              title="Formulario de asistencia">
-              Cargando…
-            </iframe>
-            -->
+          <!-- El formulario exige login de Google: mejor en pestaña nueva que en iframe
+               (Safari/iOS bloquea cookies de terceros y rompe el login incrustado) -->
+          <div class="rsvp-cta" id="rsvp-form-area">
+            <a href="https://forms.gle/nzTafar3FvDAxxG6A" class="rsvp-btn" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Confirmar asistencia
+            </a>
+            <p class="rsvp-hint">Se abre en una pestaña nueva · necesitarás tu cuenta de Google</p>
           </div>
 
           <p class="rsvp-signature">Javier <span class="amp">&amp;</span> Marta</p>

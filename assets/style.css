@@ -1247,17 +1247,44 @@ button {
 /* ================================================================
    RSVP
 ================================================================ */
-.rsvp-placeholder {
-  margin-top: 2rem;
-  padding: 2rem 1.5rem;
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 1rem;
+.rsvp-cta {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
 }
 
-.rsvp-soon {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.75);
+.rsvp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2.5rem;
+  background: var(--cream);
+  color: var(--green);
+  border-radius: 999px;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.rsvp-btn svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.rsvp-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  background: var(--white);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3);
+}
+
+.rsvp-hint {
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.55);
 }
 
 .rsvp-signature {
