@@ -314,3 +314,43 @@ function initScrollReveal() {
     }
   };
 })();
+
+/* ----------------------------------------------------------------
+   COPIAR NÚMERO DE CUENTA
+---------------------------------------------------------------- */
+(function initIbanCopy() {
+  const btn = document.getElementById('iban-copy');
+  const num = document.getElementById('iban-number');
+  if (!btn || !num) return;
+
+  const label = btn.querySelector('.iban-copy-label');
+
+  function feedback() {
+    const prev = label.textContent;
+    label.textContent = '¡Copiado!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      label.textContent = prev;
+      btn.classList.remove('copied');
+    }, 1800);
+  }
+
+  btn.addEventListener('click', () => {
+    const iban = num.textContent.replace(/\s+/g, '');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(iban).then(feedback).catch(fallback);
+    } else {
+      fallback();
+    }
+  });
+
+  function fallback() {
+    const range = document.createRange();
+    range.selectNodeContents(num);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    try { document.execCommand('copy'); feedback(); } catch (e) { /* noop */ }
+    sel.removeAllRanges();
+  }
+})();
