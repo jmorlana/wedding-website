@@ -1281,9 +1281,9 @@ button {
   margin-bottom: 1.5rem;
 }
 
-.gift-car svg {
-  width: 220px;
-  max-width: 70%;
+.gift-car img {
+  width: 240px;
+  max-width: 72%;
   height: auto;
 }
 
